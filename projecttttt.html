@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    body{background-color: white;
+    }
+  h2,p{color:#6D6875;
+    text-align: center;}
+    div{text-align:center;
+      font-size: 20px;
+      border: 5px solid;
+      border-radius: 15px;
+      }
+    h1{color: #E5989B;
+    font-style: oblique;
+  text-align: center;}
+  form{
+    
+    width: 400px;
+    height: 350px;
+  }
+  h5{color: #E5989B;}
+  
+  .button {
+  position: relative;
+  width: 120px;
+  height: 40px;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  color: white;
+  flex-direction: column;
+  justify-content: center;
+  border: none;
+  padding: 12px;
+  gap: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  left: -4px;
+  top: -1px;
+  margin: auto;
+  width: 128px;
+  height: 48px;
+  border-radius: 10px;
+  background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100% );
+  z-index: -10;
+  pointer-events: none;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.button::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100% );
+  transform: translate3d(0, 0, 0) scale(0.95);
+  filter: blur(20px);
+}
+
+.button:hover::after {
+  filter: blur(30px);
+}
+
+.button:hover::before {
+  transform: rotate(-180deg);
+}
+
+.button:active::before {
+  scale: 0.7;
+}
+#scrolltop {
+ position: fixed;
+    bottom: 15px;
+    right: 15px;
+    padding: 30px;
+    background-color: rgba(145, 31, 31, 0.5);
+    background-position: center center;
+    display: block;
+    z-index: 9999;
+}
+/* Input container */
+.input-container {
+  position: relative;
+  margin: 20px;
+}
+
+/* Input field */
+.input-field {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  outline: none;
+  background-color: transparent;
+}
+
+/* Input label */
+.input-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 16px;
+  color: rgba(204, 204, 204, 0);
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+/* Input highlight */
+.input-highlight {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: #007bff;
+  transition: all 0.3s ease;
+}
+
+/* Input field:focus styles */
+.input-field:focus + .input-label {
+  top: -20px;
+  font-size: 12px;
+  color: #007bff;
+}
+
+.input-field:focus + .input-label + .input-highlight {
+  width: 100%;
+}
+
+  </style>
+  
+<title>project</title>
+
+<br><br>
+</head>
+<body>
+  <h1 style="display: inline;">Add to cart</h1><i class='bx bx-cart-add bx-tada' style='color: #000;font-size: xx-large;'  ></i>
+  <br>
+  <label for="category">category</label>
+  <select id="category" name="categories">
+  <option value="0"selected disabled>product</option>
+  <option value="1">Body lotion</option>
+  <option value="2">Body splash</option>
+  <option value="3">shower gel</option>
+  <option value="4">Body scrub</option>
+  
+  
+  </select>
+  <br><br>
+   <br><br>
+<h1>lady house</h1>
+<img src="photo_2023-12-02_14-51-28.jpg"height="300 px"width="1000 px">
+
+
+<br>
+
+   <h2>Body lotion</h2>
+<div>
+          <img src="photo_2023-11-04_12-31-14.jpg"height="300 px"width="300 px">
+      
+          <h4>sunkissed Honey Body Lotion</h4>
+          <p><h5>price=299.00EGP</h5></p>
+        </div>
+       
+      <div> <img src="photo_2023-11-04_12-31-20.jpg"height="300 px"width="300 px">
+      
+        <h4>white mist Body Lotion</h4>
+         <p><h5>price=299.00EGP</h5></p>
+      
+        </div>
+     
+
+<div>
+      
+      <img src="photo_2023-11-04_12-31-26.jpg"height="300 px"width="300 px">
+      
+      <h4>pink sugar Body Lotion</h4>
+       <p><h5>price=299.00EGP</h5></p>
+      
+       </div>
+      <div><img src="photo_2023-11-04_12-31-31.jpg"height="300 px"width="300 px">
+         
+        <h4>Tropical Breeze Body Lotion</h4>
+         <p><h5>price=299.00EGP</h5></p>
+         
+       
+         </div>
+
+         
+            <h2>Body Splash</h2>
+            <div><img src="photo_2023-11-04_12-31-02.jpg"height="300 px"width="300 px">
+   
+              <h4>violet Twist Body Splash</h4>
+               <p><h5>price=330.00EGP</h5></p>
+               
+  </div>
+            
+          
+          
+            <div><img src="photo_2023-11-04_12-30-57.jpg"height="300 px"width="300 px">
+   
+              <h4>sunkissed honey Body Splash</h4>
+               <p><h5>price=330.00EGP</h5></p>
+              
+  </div>
+            
+          
+          <div> <img src="photo_2023-11-04_12-30-51.jpg"height="300 px"width="300 px">
+   
+            <h4>White Musk Body Splash</h4>
+             <p><h5>price=330.00EGP</h5></p>
+            
+</div>
+            
+           
+          
+          
+            <div> <img src="photo_2023-11-04_12-30-44.jpg"height="300 px"width="300 px">
+   
+              <h4>Pink Sugar Body Splash</h4>
+               <p><h5>price=330.00EGP</h5></p>
+               
+  </div>
+           
+          
+          
+            <h2>Shower Gel</h2>
+            <div><img src="photo_2023-11-04_12-31-41.jpg"height="300 px"width="300 px">
+   
+              <h4>violet Twist Shower Gel</h4>
+               <p><h5>price=219.00EGP</h5></p>
+              
+            </div>
+            
+          
+            <div><img src="photo_2023-11-04_12-31-50.jpg"height="300 px"width="300 px">
+   
+              <h4>Sunkissed Honey Shower Gel</h4>
+               <p><h5>price=219.00EGP</h5></p>
+               
+  </div>
+            
+          
+            <div><img src="photo_2023-11-04_12-31-59.jpg"height="300 px"width="300 px">
+   
+              <h4>White Musk Shower Gel</h4>
+               <p><h5>price=219.00EGP</h5></p>
+               
+  </div>
+            
+
+          
+          
+            <div> <img src="photo_2023-11-04_12-32-07.jpg"height="300 px"width="300 px">
+   
+              <h4>Tropical Breeze Shower Gel</h4>
+               <p><h5>price=219.00EGP</h5></p>
+               
+               </div>
+           
+
+          
+            <div> <img src="photo_2023-11-04_12-32-13.jpg"height="300 px"width="300 px">
+   
+              <h4>Pink sugar Shower Gel</h4>
+               <p><h5>price=219.00EGP</h5></p>
+               
+            </div>
+           
+             <br>
+             <h2>Body scrub</h2>
+<div>
+  <img src="photo_2023-11-05_22-16-15.jpg"height="300 px"width="300 px">
+
+  <h4>Vanilla Marshmallow Body Scrub</h4>
+   <p><h5>price=119.00EGP</h5></p>
+   
+</div>
+<div><img src="photo_2023-11-05_22-20-03.jpg"height="300 px"width="300 px">
+   
+  <h4>Passion Fruit Body Scrub</h4>
+   <p><h5>price=119.00EGP</h5></p>
+   
+</div> 
+               
+
+
+              <div>
+                <img src="photo_2023-11-04_12-14-42.jpg"height="300 px"width="300 px">
+   
+                <h4>Cherry Blossom Body Scrub</h4>
+                 <p><h5>price=119.00EGP</h5></p>
+                 
+                </div>
+
+              
+<div>
+  <img src="photo_2023-11-05_22-22-11.jpg"height="300 px"width="300 px">
+   
+  <h4>Arabian Coffee Body Scrub</h4>
+   <p><h5>price=119.00EGP</h5></p>
+</div>
+               
+               <br>
+               <h2> Registration Form </h2>
+               <form action="" target="" method =""> 
+                <div class="input-container">
+                <input placeholder="Enter text" class="input-field" type="text">
+                <label for="input-field" class="input-label">first name</label>
+                <span class="input-highlight"></span>
+              </div>            
+              
+              <div class="input-container">
+                <input placeholder="Enter text" class="input-field" type="text">
+                <label for="input-field" class="input-label">last name</label>
+                <span class="input-highlight"></span>
+              </div>
+              
+              <div class="input-container">
+                <input placeholder="Enter text" class="input-field" type="text">
+                <label for="input-field" class="input-label">Email</label>
+                <span class="input-highlight"></span>
+              </div>
+              
+                <div class="input-container">
+                  <input placeholder="Enter text" class="input-field" type="text">
+                  <label for="input-field" class="input-label">password</label>
+                  <span class="input-highlight"></span>
+                </div>
+                <label for ="box"> I agree with form conditions </label>
+                <input id= "box" type= "checkbox" name ="check" value="val1" checked /> 
+                
+                
+                 <br><br>
+                 <button class="button">
+                  submit
+                </button>
+                <script>window.onscroll = function() {
+                  var e = document.getElementById("scrolltop");
+                     if (!e) {
+                      e = document.createElement("a");
+                         e.id = "scrolltop";
+                         e.href = "#";
+                         document.body.appendChild(e);
+                  }
+                  e.style.display = document.documentElement.scrollTop > 300 ? "block" : "none";
+                     e.onclick = (ev) => {
+                      ev.preventDefault();
+                         document.documentElement.scrollTop = 0;
+                     };
+                 };
+               
+                 
+                 </script>
+                </form>
+         </script>    
+       
+          </body>
+           </html>
+<br>
+<h1>About Us</h1>
+<h4>lady house is a young and innovative brand that combines the latest technologies and nature’s finest ingredients to provide women with its most coveted skincare and personal hygiene products. The brand, which constantly strives to meet the ever-changing needs of modern women, provides them with quality products at their convenience.</h4>
+<h1>Contact Us</h1>
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<h1 style="display: inline;">facebook</h1><a href="https://www.facebook.com/do.ha.5030927?mibextid=9R9pXO"><i class='bx bxl-facebook-circle bx-tada' style='color:#0c64bb ;font-size: xx-large;' ></i>
+  <h1 style="display: inline;">0114807544</h1><i class='bx bx-phone bx-tada' style='color:#141516;font-size: xx-large;' ></i>
+ 
+  
+
+
+
+
